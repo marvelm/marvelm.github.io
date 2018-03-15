@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dynamically Scaling Kubernetes Deployments | Marvel&#39;s Blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Dynamically Scaling Kubernetes Deployments</span></h1>
+
+<h2 class="date">2018/03/13</h2>
+</div>
+
+<main>
+<ul>
+<li><a href="https://github.com/kubernetes/client-go">Go client for Kubernetes</a></li>
+<li><a href="https://github.com/kubernetes/client-go/tree/d6f3ab164c2f1710a3bb75f57f2306884492bd1b/examples">Examples</a></li>
+</ul>
+
+<pre><code class="language-go">import (
+    &quot;time&quot;
+
+    metav1 &quot;k8s.io/apimachinery/pkg/apis/meta/v1&quot;
+    &quot;k8s.io/client-go/kubernetes&quot;
+    &quot;k8s.io/client-go/kubernetes/typed/apps/v1beta2&quot;
+    autoscalingv1 &quot;k8s.io/client-go/kubernetes/typed/autoscaling/v1&quot;
+    &quot;k8s.io/client-go/rest&quot;
+    &quot;k8s.io/client-go/util/retry&quot;
+)
+
+var clientset *kubernetes.Clientset
+var deploymentsClient v1beta2.DeploymentInterface
+
+func kubeInit() {
+  config, _ := rest.InClusterConfig()
+  clientset, _ = kubernetes.NewForConfig(config)
+  deploymentsClient = clientset.AppsV1beta2().Deployments(kubeNamespace)
+}
+
+func getNumWorkers() int {
+  deployment, _ := deploymentsClient.Get(&quot;my-workers&quot;, metav1.GetOptions{})
+  return int(*deployment.Spec.Replicas)
+}
+
+func setNumWorkers(numWorkers int) error {
+  return retry.RetryOnConflict(retry.DefaultRetry, func() error {
+    deployment, err := deploymentsClient.Get(&quot;my-workers&quot;, metav1.GetOptions{})
+    if err != nil {
+      return err
+    }
+
+    wrapper := int32(numWorkers)
+    deployment.Spec.Replicas = &amp;wrapper
+
+    _, err = deploymentsClient.Update(deployment)
+    return err
+  })
+}
+</code></pre>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  <a href="https://github.com/marvelm">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

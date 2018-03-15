@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Marvel&#39;s Blog</title>
-    <link>https://marvelm.github.io/</link>
-    <description>Recent content on Marvel&#39;s Blog</description>
+    <title>Kubernetes on Marvel&#39;s Blog</title>
+    <link>https://marvelm.github.io/tags/kubernetes/</link>
+    <description>Recent content in Kubernetes on Marvel&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-CA</language>
     <lastBuildDate>Tue, 13 Mar 2018 22:06:14 -0400</lastBuildDate>
     
-	<atom:link href="https://marvelm.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://marvelm.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
