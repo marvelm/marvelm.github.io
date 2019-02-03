@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Go on Marvel&#39;s Blog</title>
+    <title>go on Marvel&#39;s Blog</title>
     <link>https://marvelm.github.io/tags/go/</link>
-    <description>Recent content in Go on Marvel&#39;s Blog</description>
+    <description>Recent content in go on Marvel&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-CA</language>
     <lastBuildDate>Tue, 13 Mar 2018 22:06:14 -0400</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Tue, 13 Mar 2018 22:06:14 -0400</pubDate>
       
       <guid>https://marvelm.github.io/notes/dynamic-scaling-kubernetes/</guid>
-      <description>Go client for Kubernetes Examples  import ( &amp;quot;time&amp;quot; metav1 &amp;quot;k8s.io/apimachinery/pkg/apis/meta/v1&amp;quot; &amp;quot;k8s.io/client-go/kubernetes&amp;quot; &amp;quot;k8s.io/client-go/kubernetes/typed/apps/v1beta2&amp;quot; autoscalingv1 &amp;quot;k8s.io/client-go/kubernetes/typed/autoscaling/v1&amp;quot; &amp;quot;k8s.io/client-go/rest&amp;quot; &amp;quot;k8s.io/client-go/util/retry&amp;quot; ) var clientset *kubernetes.Clientset var deploymentsClient v1beta2.DeploymentInterface func kubeInit() { config, _ := rest.InClusterConfig() clientset, _ = kubernetes.NewForConfig(config) deploymentsClient = clientset.AppsV1beta2().Deployments(kubeNamespace) } func getNumWorkers() int { deployment, _ := deploymentsClient.Get(&amp;quot;my-workers&amp;quot;, metav1.GetOptions{}) return int(*deployment.Spec.Replicas) } func setNumWorkers(numWorkers int) error { return retry.RetryOnConflict(retry.DefaultRetry, func() error { deployment, err := deploymentsClient.Get(&amp;quot;my-workers&amp;quot;, metav1.GetOptions{}) if err != nil { return err } wrapper := int32(numWorkers) deployment.</description>
+      <description>Go client for Kubernetes Examples  import ( metav1 &amp;quot;k8s.io/apimachinery/pkg/apis/meta/v1&amp;quot; &amp;quot;k8s.io/client-go/kubernetes&amp;quot; &amp;quot;k8s.io/client-go/kubernetes/typed/apps/v1beta2&amp;quot; autoscalingv1 &amp;quot;k8s.io/client-go/kubernetes/typed/autoscaling/v1&amp;quot; &amp;quot;k8s.io/client-go/rest&amp;quot; &amp;quot;k8s.io/client-go/util/retry&amp;quot; ) var clientset *kubernetes.Clientset var deploymentsClient v1beta2.DeploymentInterface func kubeInit() { config, _ := rest.InClusterConfig() clientset, _ = kubernetes.NewForConfig(config) deploymentsClient = clientset.AppsV1beta2().Deployments(kubeNamespace) } func getNumWorkers() int { deployment, _ := deploymentsClient.Get(&amp;quot;my-workers&amp;quot;, metav1.GetOptions{}) return int(*deployment.Spec.Replicas) } func setNumWorkers(numWorkers int) error { return retry.RetryOnConflict(retry.DefaultRetry, func() error { deployment, err := deploymentsClient.Get(&amp;quot;my-workers&amp;quot;, metav1.GetOptions{}) if err != nil { return err } wrapper := int32(numWorkers) deployment.</description>
     </item>
     
   </channel>

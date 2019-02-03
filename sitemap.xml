@@ -13,12 +13,6 @@
   </url>
   
   <url>
-    <loc>https://marvelm.github.io/tags/go/</loc>
-    <lastmod>2018-03-13T22:06:14-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://marvelm.github.io/tags/kubernetes/</loc>
     <lastmod>2018-03-13T22:06:14-04:00</lastmod>
     <priority>0</priority>
@@ -43,13 +37,19 @@
   </url>
   
   <url>
-    <loc>https://marvelm.github.io/tags/scaling/</loc>
+    <loc>https://marvelm.github.io/tags/</loc>
     <lastmod>2018-03-13T22:06:14-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://marvelm.github.io/tags/</loc>
+    <loc>https://marvelm.github.io/tags/go/</loc>
+    <lastmod>2018-03-13T22:06:14-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://marvelm.github.io/tags/scaling/</loc>
     <lastmod>2018-03-13T22:06:14-04:00</lastmod>
     <priority>0</priority>
   </url>

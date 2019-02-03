@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>Go</title>
-      <link>https://marvelm.github.io/tags/go/</link>
-      <pubDate>Tue, 13 Mar 2018 22:06:14 -0400</pubDate>
-      
-      <guid>https://marvelm.github.io/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Kubernetes</title>
       <link>https://marvelm.github.io/tags/kubernetes/</link>
       <pubDate>Tue, 13 Mar 2018 22:06:14 -0400</pubDate>
@@ -30,7 +21,16 @@
     </item>
     
     <item>
-      <title>Scaling</title>
+      <title>go</title>
+      <link>https://marvelm.github.io/tags/go/</link>
+      <pubDate>Tue, 13 Mar 2018 22:06:14 -0400</pubDate>
+      
+      <guid>https://marvelm.github.io/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scaling</title>
       <link>https://marvelm.github.io/tags/scaling/</link>
       <pubDate>Tue, 13 Mar 2018 22:06:14 -0400</pubDate>
       
